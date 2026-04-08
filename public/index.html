@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PayFlot | Stop Chasing Payments. Get Paid Faster.</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-bolt"></i>
+                <span>PayFlot</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#waitlist" class="btn btn-outline">Join Waitlist</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Stop Chasing Payments.<br>Get Paid <span class="highlight">Faster</span>.</h1>
+                <p class="hero-subtitle">Automated invoice reminders that save you time, reduce stress, and improve cash flow. Built for freelancers and small businesses.</p>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">71%</div>
+                        <div class="stat-label">of freelancers face late payments</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">14 days</div>
+                        <div class="stat-label">average payment delay</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">3 hours</div>
+                        <div class="stat-label">saved per month on chasing</div>
+                    </div>
+                </div>
+
+                <div class="waitlist-form">
+                    <h3>Join our waitlist for early access</h3>
+                    <p>Be among the first to try PayFlot. Get 3 months free when we launch.</p>
+                    <form id="waitlistForm">
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Your email address" required>
+                            <select id="userType">
+                                <option value="">I am a...</option>
+                                <option value="freelancer">Freelancer</option>
+                                <option value="consultant">Consultant</option>
+                                <option value="agency">Small Agency</option>
+                                <option value="creator">Content Creator</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-rocket"></i> Join Waitlist
+                            </button>
+                        </div>
+                        <p class="form-note">No spam. Unsubscribe anytime.</p>
+                    </form>
+                    <div id="successMessage" class="success-message" style="display: none;">
+                        <i class="fas fa-check-circle"></i> Thank you! You're on the waitlist.
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="dashboard-preview">
+                    <div class="dashboard-header">
+                        <div class="dashboard-tabs">
+                            <span class="active">Invoices</span>
+                            <span>Settings</span>
+                            <span>Analytics</span>
+                        </div>
+                    </div>
+                    <div class="dashboard-content">
+                        <div class="invoice-item overdue">
+                            <div class="invoice-client">Acme Corp</div>
+                            <div class="invoice-amount">$2,500</div>
+                            <div class="invoice-status">
+                                <span class="status-badge overdue">Overdue: 14 days</span>
+                                <span class="reminder-sent"><i class="fas fa-check"></i> Reminder sent</span>
+                            </div>
+                        </div>
+                        <div class="invoice-item due-soon">
+                            <div class="invoice-client">Startup XYZ</div>
+                            <div class="invoice-amount">$1,200</div>
+                            <div class="invoice-status">
+                                <span class="status-badge due-soon">Due in 3 days</span>
+                                <span class="reminder-scheduled"><i class="fas fa-clock"></i> Reminder scheduled</span>
+                            </div>
+                        </div>
+                        <div class="invoice-item paid">
+                            <div class="invoice-client">Design Studio</div>
+                            <div class="invoice-amount">$800</div>
+                            <div class="invoice-status">
+                                <span class="status-badge paid">Paid today</span>
+                                <span class="reminder-success"><i class="fas fa-bolt"></i> PayFlot worked!</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dashboard-stats">
+                        <div class="stat-card">
+                            <div class="stat-title">Avg. Payment Time</div>
+                            <div class="stat-value">7 days</div>
+                            <div class="stat-change down">-50%</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-title">Time Saved</div>
+                            <div class="stat-value">3.2h</div>
+                            <div class="stat-change up">This month</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">How PayFlot Works</h2>
+            <p class="section-subtitle">Connect once, automate forever. Focus on your work, not on chasing payments.</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <h3>Connect Your Tools</h3>
+                    <p>Link Stripe, QuickBooks, or upload invoices manually. PayFlot integrates with your existing workflow.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Set Smart Rules</h3>
+                    <p>"Remind at 7 days overdue", "Send SMS at 14 days", "Escalate at 30 days". Fully customizable.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Automated Reminders</h3>
+                    <p>Professional, polite reminders sent via email, SMS, or WhatsApp. PayFlot templates you can personalize.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Track & Optimize</h3>
+                    <p>See which clients pay fastest, track your average payment time, and improve your cash flow.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">Simple Setup, Powerful Results</h2>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Connect Your Account</h3>
+                        <p>Link Stripe, QuickBooks, or upload invoices. Takes 2 minutes.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Set Your Rules</h3>
+                        <p>"Send email reminder at 7 days", "SMS at 14 days", "Final notice at 30 days".</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Automate & Relax</h3>
+                        <p>We handle the reminders. You get paid faster. Save 3+ hours per month.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2 class="section-title">Simple, Transparent Pricing</h2>
+            <p class="section-subtitle">Start free. Upgrade as you grow.</p>
+            
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Free</h3>
+                        <div class="price">$0<span>/month</span></div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 5 reminders per month</li>
+                        <li><i class="fas fa-check"></i> Email reminders only</li>
+                        <li><i class="fas fa-check"></i> Basic templates</li>
+                        <li><i class="fas fa-check"></i> 1 connected account</li>
+                    </ul>
+                    <button class="btn btn-outline">Get Started</button>
+                </div>
+                
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Pro</h3>
+                        <div class="price">$19<span>/month</span></div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 200 reminders per month</li>
+                        <li><i class="fas fa-check"></i> Email + SMS reminders</li>
+                        <li><i class="fas fa-check"></i> Custom templates</li>
+                        <li><i class="fas fa-check"></i> 5 connected accounts</li>
+                        <li><i class="fas fa-check"></i> Advanced analytics</li>
+                        <li><i class="fas fa-check"></i> Priority support</li>
+                    </ul>
+                    <button class="btn btn-primary">Join Waitlist</button>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Business</h3>
+                        <div class="price">$49<span>/month</span></div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Unlimited reminders</li>
+                        <li><i class="fas fa-check"></i> Email + SMS + WhatsApp</li>
+                        <li><i class="fas fa-check"></i> White-label templates</li>
+                        <li><i class="fas fa-check"></i> Unlimited accounts</li>
+                        <li><i class="fas fa-check"></i> API access</li>
+                        <li><i class="fas fa-check"></i> Dedicated support</li>
+                    </ul>
+                    <button class="btn btn-outline">Join Waitlist</button>
+                </div>
+            </div>
+            
+            <p class="pricing-note">All plans include a 14-day free trial. No credit card required to join waitlist.</p>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Get Paid Faster?</h2>
+            <p>Join 500+ freelancers and small businesses on our waitlist.</p>
+            <a href="#waitlist" class="btn btn-primary btn-large">
+                <i class="fas fa-rocket"></i> Join Waitlist & Get 3 Months Free
+            </a>
+            <p class="cta-note">Launching Q2 2026</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-bolt"></i>
+                    <span>PayFlot</span>
+                </div>
+                <p>PayFlot automates payments so you can focus on what matters.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="mailto:hello@payflot.com">Contact</a>
+                </div>
+                <p class="copyright">© 2026 PayFlot. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>
