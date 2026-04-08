@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const waitlistForm = document.getElementById('waitlistForm');
     const successMessage = document.getElementById('successMessage');
     
-    // ✅ TON URL GOOGLE APPS SCRIPT
-    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyh1qogb1_XRNAhR1MBSeeTh8hLAkfeFW-YS89Q1NtvYA0rqyUMRNtH-nNPIVR9L4ti/exec';
+    // ⚠️ REMPLACE PAR TON URL GOOGLE APPS SCRIPT ⚠️
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/TON_SCRIPT_ID/exec';
     
     if (waitlistForm) {
         waitlistForm.addEventListener('submit', async function(e) {
@@ -75,6 +75,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 `;
                 
+                // Option: ouvrir client email pour backup manuel
+                // openEmailBackup(email, userType);
+                
             } finally {
                 // Réactiver bouton
                 submitBtn.innerHTML = originalText;
@@ -129,6 +132,39 @@ document.addEventListener('DOMContentLoaded', function() {
             // Ignorer les erreurs de localStorage
         }
     }
+    
+    // Ouvrir client email pour backup manuel (optionnel)
+    function openEmailBackup(email, userType) {
+        const subject = encodeURIComponent('PayFlot Waitlist Backup');
+        const body = encodeURIComponent(
+            `Email: ${email}\n` +
+            `Type: ${userType}\n` +
+            `Date: ${new Date().toLocaleString()}\n` +
+            `\n---\n` +
+            `This is a backup because Google Sheets API failed.`
+        );
+        
+        // Ouvre le client email
+        window.open(`mailto:hello@payflot.com?subject=${subject}&body=${body}`, '_blank');
+    }
+    
+    // Voir les backups locaux (pour debug)
+    window.viewPayFlotBackups = function() {
+        const backups = [];
+        for (let i = 0; i < localStorage.length; i++) {
+            const key = localStorage.key(i);
+            if (key.startsWith('payflot_backup_')) {
+                try {
+                    backups.push(JSON.parse(localStorage.getItem(key)));
+                } catch (e) {}
+            }
+        }
+        console.log('📦 PayFlot Local Backups:', backups);
+        return backups;
+    };
+    
+    // Smooth scrolling, animations, etc. (garder le reste du code)
+    // ... [le reste de ton code existant] ...
     
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
