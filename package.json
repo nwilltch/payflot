@@ -1,0 +1,26 @@
+{
+  "name": "payflow-landing",
+  "version": "1.0.0",
+  "description": "Landing page for PayFlow - Automated Invoice Reminder SaaS",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "dev": "live-server --port=8000",
+    "deploy:vercel": "vercel --prod",
+    "deploy:netlify": "netlify deploy --prod",
+    "deploy:surge": "surge . payflow-$(date +%s).surge.sh",
+    "build": "echo 'No build step required for static site'"
+  },
+  "keywords": [
+    "saas",
+    "landing-page",
+    "invoice",
+    "automation",
+    "freelancer"
+  ],
+  "author": "PayFlow Team",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
